@@ -2,10 +2,251 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Ultimate Physical Fitness, Ultimate, Physical, Fitness, Madhyapur Thimi, Thimi, GYM, Club, GYM">
+	<title>Ultimate Physical Fitness- GYM & Fitness club</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+	<style type="text/css">
+	    html,body{
+	        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	        color: #fefefe;
+	    }
+		.content-area {
+        	 min-height: 100vh;
+        	 width: 100%;
+        	 text-align: center;
+        }
+         .d-flex {
+        	 display: flex;
+        }
+         .align-items-center {
+        	 align-items: center;
+        }
+         .justify-content-center {
+        	 justify-content: center;
+        }
+        /* make keyframes that tell the start state and the end state of our object */
+         @-webkit-keyframes fadeIn {
+        	 from {
+        		 opacity: 0;
+        	}
+        	 to {
+        		 opacity: 1;
+        	}
+        }
+         @-moz-keyframes fadeIn {
+        	 from {
+        		 opacity: 0;
+        	}
+        	 to {
+        		 opacity: 1;
+        	}
+        }
+         @keyframes fadeIn {
+        	 from {
+        		 opacity: 0;
+        	}
+        	 to {
+        		 opacity: 1;
+        	}
+        }
+         .fade-in {
+        	 opacity: 0;
+        	/* make things invisible upon start */
+        	 -webkit-animation: fadeIn ease-in 1;
+        	/* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+        	 -moz-animation: fadeIn ease-in 1;
+        	 animation: fadeIn ease-in 1;
+        	 -webkit-animation-fill-mode: forwards;
+        	/* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+        	 -moz-animation-fill-mode: forwards;
+        	 animation-fill-mode: forwards;
+        	 -webkit-animation-duration: 1s;
+        	 -moz-animation-duration: 1s;
+        	 animation-duration: 1s;
+        }
+         .fade-in.one {
+        	 -webkit-animation-delay: 0.7s;
+        	 -moz-animation-delay: 0.7s;
+        	 animation-delay: 0.7s;
+        }
+         .fade-in.two {
+        	 -webkit-animation-delay: 1.2s;
+        	 -moz-animation-delay: 1.2s;
+        	 animation-delay: 1.2s;
+        }
+         .fade-in.three {
+        	 -webkit-animation-delay: 1.7s;
+        	 -moz-animation-delay: 1.7s;
+        	 animation-delay: 1.7s;
+        }
+         .logo {
+        	 max-width: 280px;
+        	 width: 80%;
+        	 display: block;
+        	 margin: 0 auto;
+        }
+         h1, h2, h3, h4 {
+        	 
+        	 letter-spacing: 5px;
+        	 text-transform: uppercase;
+        	 font-weight: 100;
+        }
+         .social ul {
+        	 list-style-type: none;
+        	 padding: 0;
+        }
+         .social ul li {
+        	 display: inline-block;
+        	 margin: 5px;
+        }
+         .social ul li a img {
+        	 width: 28px;
+        }
+         .social ul li a img:hover {
+        	 opacity: 0.7;
+        }
+         .copy-right {
+        	 position: absolute;
+        	 bottom: 0;
+        	 right: 0;
+        	 left: 0;
+        	 text-align: center;
+        	 padding-bottom: 15px;
+        	 font-size: 12px;
+        	 color: rgba(225,225,225, 0.6);
+        }
+        blockquote {
+            margin: 0;
+            color: #333333;
+        }
+        
+        blockquote p {
+            padding: 15px;
+            background: #eee;
+            border-radius: 5px;
+        }
+        
+        blockquote p::before {
+            content: '\201C';
+        }
+        
+        blockquote p::after {
+            content: '\201D';
+        }
+        .youtube-background:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .logo-container{
+            background: rgba(256,255,255,0.8);
+            display: inline-block;
+            position: relative;
+            border-radius: 50%;
+            padding: 25px 0 50px;
+        }
+         
+	</style>
 </head>
 <body>
- This is a test page
+    <div data-youtube="https://www.youtube.com/watch?v=aHXraz_yZQk" class="fade-in three"></div>
+	<div class="content-area d-flex align-items-center justify-content-center">
+		<div >
+		    <div class="logo-container">
+			    <img src="logo.png" alt="" class="logo fade-in one">
+			</div>
+			<br><br>
+			<div class="fade-in two">
+			    Madhyapur Thimi, Bhaktapur, Nepal<br>
+			    Phone: 984-1472779
+			</div>
+			<figure class="quote fade-in two">
+                <blockquote>
+                    <strong><p></p></strong>
+                </blockquote>
+                <figcaption></figcaption>
+            </figure>
+            <br><br>
+            <strong class="fade-in three">Join Us</strong>
+			<div class="social fade-in three">
+				<ul>
+				    
+					<li>
+							<a href="https://www.facebook.com/ultimatephysicalfitness" taget="_blank">
+								<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA%2FPjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzJweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI%2BPGc%2BPHBhdGggZD0iTTMyLDMwYzAsMS4xMDQtMC44OTYsMi0yLDJIMmMtMS4xMDQsMC0yLTAuODk2LTItMlYyYzAtMS4xMDQsMC44OTYtMiwyLTJoMjhjMS4xMDQsMCwyLDAuODk2LDIsMlYzMHoiIGZpbGw9IiMzQjU5OTgiLz48cGF0aCBkPSJNMjIsMzJWMjBoNGwxLTVoLTV2LTJjMC0yLDEuMDAyLTMsMy0zaDJWNWMtMSwwLTIuMjQsMC00LDBjLTMuNjc1LDAtNiwyLjg4MS02LDd2M2gtNHY1aDR2MTJIMjJ6IiBmaWxsPSIjRkZGRkZGIiBpZD0iZiIvPjwvZz48Zy8%2BPGcvPjxnLz48Zy8%2BPGcvPjxnLz48L3N2Zz4%3D" alt="">
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="copy-right fade-in two">
+		&copy; 2021 Ultimate Physical Fitness
+	</div>
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/jquery.youtube-background.min.js"></script>
+    <script src="quotes.js"></script>
+    <script>
+        $(document).ready(function(){
+            jQuery('[data-youtube], [data-vbg]').youtube_background();
+        })
+         
+    </script>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "106624191739078");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+      
+      //quotes
+      var item= [Math.floor(Math.random()*quotes.length)];
+      //console.log(item)
+      $(".quote blockquote p").html(quotes[item].quote);
+      $(".quote figcaption").html("- "+quotes[item].author);
+
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ENQD5GSNL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6ENQD5GSNL');
+</script>
 </body>
 </html>

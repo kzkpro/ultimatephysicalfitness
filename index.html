@@ -10,6 +10,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 	<style type="text/css">
 	    html,body{
 	        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -154,8 +159,58 @@
             border-radius: 50%;
             padding: 25px 0 50px;
         }
+        .nav-container{
+
+        }
+        .nav-container ul{
+            display: inline-block;
+            list-style: none;
+        }
+        .nav-container ul li{
+            float: left;
+            margin: 0 4px;
+        }
+        .nav-container ul a{
+            border:  1px solid #cccccc;
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.5s;
+        }
+        .nav-container ul a:hover{
+            background: #dddddd;
+        }
+        .modal{
+            color: #333333;
+        }
+        .modal-title{
+            
+            text-align: center;
+            width: 100%;
+        }
+        .modal.fade{
+          opacity:1;
+        }
+        .modal.fade .modal-dialog {
+           -webkit-transform: translate(0);
+           -moz-transform: translate(0);
+           transform: translate(0);
+        }
+        .service-container .card{
+            height: 100%;
+            width: 100%;
+        }
+        .service-container div.card-title{
+            background: #f4f4f4;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .service-container .card-title{
+            font-weight: bold;
+        }
          
-	</style>
+</style>
 </head>
 <body>
     <div data-youtube="https://www.youtube.com/watch?v=aHXraz_yZQk" class="fade-in three"></div>
@@ -176,6 +231,13 @@
                 </blockquote>
                 <figcaption></figcaption>
             </figure>
+            <div class="nav-container">
+                <ul class="nav">
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#scheduleModal"><i class="fa-solid fa-clock"></i> Schedule</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#servicesModal"><i class="fa-solid fa-dumbbell"></i> Services</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="fa-solid fa-address-card"></i> About</a></li>
+                </ul>
+            </div>
             <br><br>
             <strong class="fade-in three">Join Us</strong>
 			<div class="social fade-in three">
@@ -194,20 +256,191 @@
 	<div class="copy-right fade-in two">
 		&copy; 2021 Ultimate Physical Fitness
 	</div>
+
+<!-- Schedule Modal -->
+<div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered animated modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Schedule</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <table class="table table-striped schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Morning</th>
+                  <th scope="col">Evening</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Sunday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Monday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tuesday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Wednesday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday</th>
+                  <td>5:00AM - 10:00AM</td>
+                  <td>4:00PM - 8:00PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturday</th>
+                  <td>Closed</td>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Services Modal -->
+<div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered animated modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Services</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container service-container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <div class="card" ">
+              
+                      <div class="card-body">
+                        <div class="card-title text-center"><i class="fa-solid fa-dumbbell" style="font-size: 8rem;"></i></div>
+                        <h5 class="card-title text-center">GYM</h5>
+                        <p class="card-text">Improve your muscle strength and boost your endurance</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card" >
+                        
+                      <div class="card-body">
+                        <div class="card-title text-center"><i class="fa-solid fa-spa"  style="font-size: 8rem;"></i></div>
+                        <h5 class="card-title text-center">Sauna</h5>
+                        <p class="card-text">Sauna bathing often claim health benefits that include detoxification, increased metabolism, weight loss, increased blood circulation, pain reduction, antiaging, skin rejuvenation, improved cardiovascular function, improved immune function, improved sleep, stress management, and relaxation.</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered animated modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="">
+                <img src="logo.png" alt="Ultimate Physical Fitness" class="logo fade-in one">
+            </div>
+            <br>
+            <div class="fade-in two text-center">
+                Madhyapur Thimi, Bhaktapur, Nepal<br>
+                Phone: 984-1472779
+            </div>
+            <br>
+            <figure class="quote fade-in two text-center">
+                <blockquote>
+                    <p style="font-weight: strong; display: inline-block;"></p>
+                </blockquote>
+                <figcaption></figcaption>
+            </figure>
+            <div class="mapouter fade-in two" style="width: 100% !important;"><div class="gmap_canvas" style="width: 100% !important;"><iframe  style="width: 100% !important;" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=ultimate%20physical%20fitnes&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-a.com"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">html google map embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style></div></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
 <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
 
     <!-- Your Chat Plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.31/vue.cjs.prod.min.js" integrity="sha512-9eYPYYqSLRRJlQVcobBpNgDNq7ui/VtXRO/abRajYVXlxLFnV6sBNGfro0+/Us2pqE8DLC2ymO5XT4LIyJZbvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="/jquery.youtube-background.min.js"></script>
     <script src="quotes.js"></script>
     <script>
+        //modal animation values
+            var showVal = 'zoomIn'; //zoomIn, bounceIn
+            var hideVal = 'zoomOut';
         $(document).ready(function(){
+            //popup modal
+            $('.nav a').click(function(e){
+                e.preventDefault();
+                //var myModal = new bootstrap.Modal(document.getElementById("myModal"), {});
+                //myModal.show();
+              });
+
+            $('.modal').on('show.bs.modal', function (e) {
+                  testAnim('show',this);
+            })
+            $('.modal').on('hide.bs.modal', function (e) {
+                  testAnim('hide', this);
+            })
+
             jQuery('[data-youtube], [data-vbg]').youtube_background();
+
+
         })
-         
+        function testAnim(type, el) {
+            if(type == 'show')
+               $(el).find('.modal-dialog').removeClass(hideVal).addClass(showVal);
+            else{
+                $(el).find('.modal-dialog').removeClass(showVal).addClass(hideVal);
+            }
+        };
     </script>
     <script>
       var chatbox = document.getElementById('fb-customer-chat');

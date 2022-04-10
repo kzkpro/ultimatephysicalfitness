@@ -416,25 +416,28 @@
         //modal animation values
             var showVal = 'zoomIn'; //zoomIn, bounceIn
             var hideVal = 'zoomOut';
-        $(document).ready(function(){
-            //popup modal
-            $('.nav a').click(function(e){
-                e.preventDefault();
-                //var myModal = new bootstrap.Modal(document.getElementById("myModal"), {});
-                //myModal.show();
-              });
+        (function($){
+            $(document).ready(function(){
+                //popup modal
+                $('.nav a').click(function(e){
+                    e.preventDefault();
+                    //var myModal = new bootstrap.Modal(document.getElementById("myModal"), {});
+                    //myModal.show();
+                  });
 
-            $('.modal').on('show.bs.modal', function (e) {
-                  testAnim('show',this);
+                $('.modal').on('show.bs.modal', function (e) {
+                      testAnim('show',this);
+                })
+                $('.modal').on('hide.bs.modal', function (e) {
+                      testAnim('hide', this);
+                })
+
+                jQuery('[data-youtube], [data-vbg]').youtube_background();
+
+
             })
-            $('.modal').on('hide.bs.modal', function (e) {
-                  testAnim('hide', this);
-            })
-
-            jQuery('[data-youtube], [data-vbg]').youtube_background();
-
-
-        })
+        })(jQuery);
+        
         function testAnim(type, el) {
             if(type == 'show')
                $(el).find('.modal-dialog').removeClass(hideVal).addClass(showVal);
